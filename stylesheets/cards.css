@@ -1,0 +1,158 @@
+.streaksCard {
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    margin: 200px;
+    
+}
+#titleBar {
+    height: 50px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    z-index: 999999;
+    background-color: #624343;
+}
+#streaks-table {
+    width: 100%;
+}
+.cardArea {
+    background-image: url("../images/backdrops/backdrop36.jpg");
+    background-position: center center;
+    margin-top: 60px;
+    margin-top: 25%;
+}
+.cardNum {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-top: -70px;
+    margin-left: -30px;
+}
+
+.cardSuit {
+    width: 50px;
+    height: 50px;
+}
+
+#streaks-menu {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #FFCCFF;
+    color: #003300;
+    z-index: 999999;
+    visibility: "hidden";
+}
+
+.streaksCard > button {
+    width: 100px;
+    height: 150px;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: #b7b7b7;
+    text-align: center;
+    transform: translateY(0px);
+}
+.streaksCard > button:active, .highlight {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    
+    border: 4px solid black;
+    background-color: #7720CC;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+/*
+ *
+ * Copyright 2011 fxspec06 (Bryan Leasot)
+ * Not for distribution
+ * Use of Villo appliccable to the appropriate licenses
+ *
+ */
+
+
+@-webkit-keyframes flipCard
+{
+from 0% to 42%{-webkit-animation-timing-function: ease-in;}
+from 42% to 58%{-webkit-animation-timing-function: ease-in-out;}
+from 58% to 100%{-webkit-animation-timing-function: ease-out;}
+}
+.hideThis {
+	visibility: hidden;
+}
+.rotateCard {
+	visibility: inherit;
+}
+.back {
+	width: 86px;
+	height: 127px;
+	position:absolute;
+	top:7.5%;
+	left:0%;
+}
+.shadow {
+	margin-left:-5%;
+	margin-top:-7%;
+	width: 96px;
+	height: 137px;
+	vertical-align: top;
+}
+.card {
+    position: fixed;
+}
+.cardFace {
+}
+.fix {
+	-webkit-animation-name: flipCard;
+	-webkit-border-radius: 0px;
+	-webkit-transition: -webkit-transform 1000ms;
+    -webkit-transform-style: preserve3d;
+    -webkit-perspective: 300;
+    -webkit-backface-visibility: hidden;
+	position: fixed;
+	vertical-align: top;
+}
+/*------------------------------------*/
+.front {
+	width: 86px;
+	height: 127px;
+}
+.backSide {
+	width: 86px;
+	height: 127px;
+}
+
+/*------------------------------------*/
+
+.cardLeft {
+	position:absolute;
+	width: 32px;
+	height: 32px;
+	top: -0%;
+	left: -3.5%;
+}
+.cardRight {
+	position:absolute;
+	width: 32px;
+	height: 32px;
+	bottom:1%;
+	left:64.5%;
+}
+.cardSuit {
+	position:absolute;
+	width: 75px;
+	height: 75px;
+	vertical-align: middle;
+	left:8.5%;
+	top:20.5%;
+}
+
