@@ -86,7 +86,8 @@ function loadHTML5Audio() {
             playQueue.push(audioIndex);
         if(playQueue.length == 1 || force) {
             try{
-                //soundArray[playQueue[0]].play();
+                console.warn("trying to play " + playQueue[audioIndex]);
+                soundArray[playQueue[0]].play();
             } catch (e){console.error("omfg error playing");}
         }
     }
