@@ -168,14 +168,16 @@ try{
 
 LoadAssistant.prototype.goToMain = function(event) {
 	this.deactivate();
+    swapScene("menu");
+    swapScene(startScene);
 	//this.cleanup();
-	setTimeout(function(){
+	/*setTimeout(function(){
 		swapScene("menu");
         menuStatus = "sub";
-        setTimeout(swapScene.bind(this, "menu"), 10, this);
-        setTimeout(swapScene.bind(this, startScene), 50, this);
+        //setTimeout(swapScene.bind(this, "menu"), 10, this);
+        //setTimeout(swapScene.bind(this, startScene), 50, this);
 		//document.getElementById("wildngame-scene").style.display = 'none';
-	}.bind(this), 0);
+	}.bind(this), 0);*/
 	
 };
 LoadAssistant.prototype.splash = function(event) {

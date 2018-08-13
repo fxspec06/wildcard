@@ -90,7 +90,7 @@ function menuButtonTap(e) {
 		case "yes":
 			stage.createNewGame();
 			menuStatus = "sub";
-			swapScene("wildngame");
+			swapScene("streaks");
 			break;
 		case "no":
 			menuStatus = "sub";
@@ -132,7 +132,7 @@ function menuButtonTap(e) {
 			swapScene("menu");
 			break;
 		case "resume":
-			swapScene("wildngame");
+			swapScene("streaks");
 			break;
 		case "tapPayouts":
 			clearTimeout(pOt);

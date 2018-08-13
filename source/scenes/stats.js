@@ -235,7 +235,7 @@ StatsAssistant.prototype.returnToMenu = function(event){
 				var controller = this.controller;
 				tStats = setTimeout(function(controller){
 					var lastController = controller;
-					swapScene("wildngame");
+					swapScene("streaks");
 					document.getElementById("RANKLG").style.visibility = "hidden";
 					document.getElementById("NEXTLG").style.visibility = "hidden";
 					document.getElementById("STATSNUMBERS").innerHTML = "";

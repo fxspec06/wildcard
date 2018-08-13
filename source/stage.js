@@ -11,7 +11,7 @@ resetStats = false;
 
 function StageAssistant() {
     
-    startScene = "wildngame";
+    startScene = "popup";
     NUM_CARDS = 6;
     playingWildnGame = false;
     
@@ -352,7 +352,7 @@ StageAssistant.prototype.setup = function() {
 	if(isPaid){mainMenu.concat(["UPGRADE"])}
 	subMenu = ["resume", "startNew", "payouts", "stats", "rank", "next"];
 	areYouSure = ["areYouSure", "yes", "no"];
-	options = ["autoDeal", "sound", "themes", "help"];
+	options = ["autoDeal", "sound", "themes", "help", "resume"];
 	help = ["how-to-play","what-wins",/*"about-villo",*/"about"];
 	tutorial = ["nextTutorial","skip","villoURL","villoTWITTER","webosworldURL","webosworldTWITTER","email","twitter","wildntwitter"];
 	themes = ["cardPrevious","cardNext","showShadow","backdropPrevious","backdropNext","themesBack"];

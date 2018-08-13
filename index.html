@@ -21,12 +21,19 @@ Use of Villo appliccable to the appropriate licenses
 		<script src="source/sceneHandler.js"></script>
         
 		<script src="source/bouncingIcons.js"></script>
-		<script src="source/stage.js"></script>
+		
+        <script src="source/careerMode.js"></script>
+        
+        <script src="source/stage.js"></script>
+        
 		<script src="source/scenes/load.js"></script>
 		<script src="source/scenes/menu.js"></script>
 		<script src="source/scenes/stats.js"></script>
 		<script src="source/scenes/wildngame.js"></script>
+        
+        
         <script src="source/scenes/checkWinners.js"></script>
+        
         
 		<script src="source/scenes/login.js"></script>
 		<script src="source/scenes/oceanlounge.js"></script>
@@ -120,17 +127,16 @@ Use of Villo appliccable to the appropriate licenses
                 if (titlebartaps >= 10) {
                     menuStatus='main';
                     swapScene('menu');
-                
                 }
             }
 		</script>
 		<div id="invisible" style="display:none;"></div>
-        <img alt="" id="mainMenuTitle" src="images/TITLE2.png" onclick="gotomain()" />
+        <img alt="" id="mainMenuTitle" src="images/TITLE2.png" style="display:none;" onclick="gotomain()" />
 		
-		<div id="showBackdropDiv" class="fixedDiv">
+		<div id="showBackdropDiv" style="display:none;" class="fixedDiv">
 			<img alt="" id="game" src="images/backdrops/backdrop1.jpg" />
 		</div>
-        <div id="touchPadDiv" class="fixedDiv"></div>
+        <div id="touchPadDiv" style="display:none;" class="fixedDiv"></div>
 		<div id="load-scene" style="display:none;">
 			<img alt="" id="avatar" src="images/splash/FXSPEC06.png" />
 			<img alt="" id="preSplash" src="images/splash/PRE-SPLASH.png" />
@@ -276,7 +282,35 @@ Use of Villo appliccable to the appropriate licenses
         
         
         
-        <div id="streaks-scene" style="width: 100%; height: 100%; background-color: #0f3a65; font-size: 18px; font-weight: 900; color: white; position: fixed; z-index: 1000000; top: 0; left: 0; text-align: center;visibility:hidden;">
+        
+        
+        
+        
+        
+        
+        
+        
+        <div id="popup-scene" style="width: 100%; height: 100%; background-color: #0f3a65; font-size: 36px; font-weight: 900; color: white; position: fixed; z-index: 1000000; top: 0; left: 0; text-align: center;">
+            <table id="popup-table">
+                <tr>
+                    <td id="popup-title">Title</td>
+                </tr>
+                <tr>
+                    <td id="popup-description">Description</td>
+                </tr>
+                <tr>
+                    <td id="popup-buttons">
+                        <button onclick="popupContinue()">OK</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        
+        
+        
+        <div id="streaks-scene" style="width: 100%; height: 100%; background-color: #0f3a65; font-size: 18px; font-weight: 900; color: white; position: fixed; z-index: 1000000; top: 0; left: 0; text-align: center;">
             <table id="streaks-table">
                 <tr style="width:100%;" onclick="gotomain()">
                     <td id="titleBar" colspan=6>Streaks!</td>
@@ -334,7 +368,7 @@ Use of Villo appliccable to the appropriate licenses
                 <tr>
                     <td style="position:fixed; bottom:18px;right:0;width:100%;opacity:.8;height:100px;font-size:18px;background-color:#CC9090;text-align:right; color:#885555;font-family:Consolas;font-weight:900;" id="buttonBar">
                     
-                        <button id="backButton" style="width: 100px; height: 100px; float:left;">BACK</button>
+                    <button id="backButton" style="width: 100px; height: 100px; float:left; display: none;">BACK</button>
                         <button id="menuButton" style="width: 100px; height: 100px; float:left;" onclick="showMenu()">MENU</button>
                         <button id="betButton" style="width: 100px; height: 100px; float:left;">BET</button>
                         <button id="dealButton" style="width: 100px; height: 100px;">DEAL</button>
@@ -345,10 +379,12 @@ Use of Villo appliccable to the appropriate licenses
            
             <script>
                 function showMenu(e) {
-                    swapScene("menu");
-                    document.getElementById("streaks-menu").style.visibility = "visible";
+                    swapScene("streaksMenu");
                 }
                 function setCards(num) {
+                    wildnGameSettings.resumePause = resume = (NUM_CARDS == num);
+                    
+                    
                     NUM_CARDS = num;
                     
                     
@@ -384,16 +420,16 @@ Use of Villo appliccable to the appropriate licenses
                     
                     
                     
-                    resume = false;
-                    document.getElementById("streaks-menu").style.visibility = "hidden";
-                    swapScene("wildngame");
+                    swapScene("streaks");
                 }
             function setWild(areWild) {
-                swapScene("menu");
-                resume = (areWild == playingWildnGame);
+                console.log(areWild + ", " + playingWildnGame);
+                wildnGameSettings.resumePause = resume = (areWild == playingWildnGame);
                 playingWildnGame = areWild;
-                document.getElementById("streaks-menu").style.visibility = "hidden";
-                swapScene("wildngame");
+                swapScene("streaks");
+            }
+            function popupContinue() {
+                swapScene("streaks");
             }
             </script>
             
@@ -404,7 +440,7 @@ Use of Villo appliccable to the appropriate licenses
         
         
         
-        <div id="streaks-menu">
+        <div id="streaksMenu-scene">
             <button onclick="setCards(5)">
                 5 cards
             </button>
@@ -418,9 +454,25 @@ Use of Villo appliccable to the appropriate licenses
                 No wild cards
             </button>
             <button onclick="returnToGame()">
-                Return to game
+                Return
+            </button>
+            <button onclick="gotomain()">
+                Hidden menu
             </button>
         </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         

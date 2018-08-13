@@ -571,7 +571,7 @@ MenuAssistant.prototype.resumeBet = function() {
 		stage.saveGame();
 		menuStatus = "sub";
 		betStatus = "no";
-		swapScene("wildngame");
+		swapScene("streaks");
 	}
 };
 MenuAssistant.prototype.loadBet = function() {

@@ -1,1 +1,1 @@
-swapScenes("menu");
+swapScene("menu");

@@ -46,8 +46,24 @@
     visibility: "hidden";
 }
 
-.streaksCard > button {
+button {
     width: 100px;
+    height: 100px;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: #b7b7b7;
+    text-align: center;
+    transform: translateY(0px);
+}
+button:active, .highlight {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    
+    border: 4px solid black;
+    background-color: #7720CC;
+    color: #FFFFFF;
+}
+.streaksCard > button {
     height: 150px;
     border: 4px solid black;
     border-radius: 10px;
@@ -63,7 +79,6 @@
     background-color: #7720CC;
     color: #FFFFFF;
 }
-
 
 
 

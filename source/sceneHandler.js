@@ -1,4 +1,4 @@
-scenes = ["load", "menu", "stats", "wildngame", "login", "skyLounge", "oceanLounge", "leaderboards"];
+scenes = ["load", "menu", "streaksMenu", "streaks", "popup", "stats", "wildngame", "login", "skyLounge", "oceanLounge", "leaderboards"];
 
 function swapScene(scene, args) {
 	if(deviceType == "Android"){Android.blur();}
@@ -35,12 +35,25 @@ function swapScene(scene, args) {
 			document.getElementById("showCardDiv").innerHTML = "";
 			MenuAssistant.prototype.deactivate();
 			break;
-		case "stats":
+            
+            
+            
+        case "streaksMenu":
+            break;
+        case "streaks":
+            WildngameAssistant.prototype.activate(args);
+            break;
+        case "popup":
+            break;
+            
+            
+            
+        case "stats":
 			StatsAssistant.prototype.deactivate();
 			break;
 		case "wildngame":
 			WildngameAssistant.prototype.deactivate();
-            document.getElementById("streaks-scene").style.visibility = 'hidden';
+            //document.getElementById("streaks-scene").style.visibility = 'hidden';
 			break;
 		case "login":
 			LoginAssistant.prototype.deactivate();
@@ -73,7 +86,7 @@ function swapScene(scene, args) {
 			break;
 		case "wildngame":
 			document.getElementById("wildngame-scene").style.display = '';
-            document.getElementById("streaks-scene").style.visibility = 'visible';
+            //document.getElementById("streaks-scene").style.visibility = 'visible';
 			WildngameAssistant.prototype.activate(args);
 			break;
 		case "login":
@@ -95,7 +108,18 @@ function swapScene(scene, args) {
 			document.getElementById("leaderboards-scene").style.display = '';
 			LeaderboardsAssistant.prototype.activate();
 			break;
+        case "streaks":
+            document.getElementById("streaks-scene").style.display = '';
+            WildngameAssistant.prototype.activate(args);
+            break;
+        case "streaksMenu":
+            document.getElementById("streaksMenu-scene").style.display = '';
+            break;
+        case "popup":
+            document.getElementById("popup-scene").style.display = '';
+            break;
 	}
+    
 }
 function goBack() {
 	switch(currentScene) {

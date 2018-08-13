@@ -1,3 +1,4 @@
+
 WildngameAssistant.prototype.checkAll = function(longArrayCards, longArraySuits) {
     
     if (NUM_CARDS == 5)
