@@ -117,7 +117,7 @@ try{
 		canSubmit = true;
 	}
 	if(!didTutorial) {
-		menuStatus = "freshInstall";
+		//menuStatus = "freshInstall";
 	}
 	this.didLoad = false;
 	setTimeout(this.avatar.bind(this), 0);
