@@ -105,7 +105,9 @@ WildngameAssistant.prototype.activate = function(event) {
 	if (wildnGameSettings.resumePause && (!isFlashing || (typeof(isTesting)!="undefined" && isTesting == true))){
 		resume = true;
 		wildnGameSettings.resumePause = false;
-	}
+    } else {
+        resume = false;
+    }
 	switch (resume) {
 		case (true):
 			if (playingWildnGame){wild = wildnGameSettings.wild};
@@ -590,14 +592,15 @@ WildngameAssistant.prototype.deal = function() {
 					bgUrl = "images/suits/cherry.png";
 					break;
 			};
-			//document.getElementById(divString + "suit").style.left = 6 + "px";
+			//document.getElementById(divString + "suits").style.left = 6 + "px";
             
             
             
             
             
-            document.getElementById(divString + "suit").innerHTML = "<img class='cardSuit' src='"+bgUrl+"' />";
-            
+            document.getElementById(divString + "suits").innerHTML = "<img class='cardImage' src='"+bgUrl+"' />";
+                  //document.getElementById(divString + "suits").style.backgroundImage  = "url("+bgUrl+")";
+
             switch(number) {
                 case 14:
                     number = "A";
@@ -630,7 +633,7 @@ WildngameAssistant.prototype.deal = function() {
 				document.getElementById(divString + "contents").style.marginTop = verticalMargin + "px";
 			}
 			if (doScale) {
-				scale([divString + "right", divString + "left", divString + "suit", divString + "up"], true, true, false, false);
+				scale([divString + "right", divString + "left", divString + "suits", divString + "up"], true, true, false, false);
 			}
 			document.getElementById(divString + "contents").className = "";*/
 			if(!autoDeal && !resume){

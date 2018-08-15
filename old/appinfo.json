@@ -1,0 +1,12 @@
+{
+	"id": "com.fxspec.cribbageboardplus",
+	"version": "1.0.0",
+	"vendor": "fxspec06",
+	"type": "web",
+	"main": "index.htm",
+	"title": "cribbage board+",
+	"icon": "icons/icon256.png",
+	"splashIcon": "icons/icon512.png",
+	"uiRevision": "2",
+	"noWindow":false
+}

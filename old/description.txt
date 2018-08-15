@@ -1,0 +1,62 @@
+cribbage board+
+
+replacement for physical cribbage board
+
+created under 50hrs using latest enyojs beta released late june 2012
+
+features:
+- stock enyo 2.0
+- easy setup
+- no need for physical board
+- up to 3 players
+- remembers old players
+- animated pegs
+- easy to move
+- changeable layout
+- history
+- undo
+
+additional features from "cribbage board":
+- auto-save
+- load later
+- detailed stats tracks:
+---- played
+---- wins
+---- losses
+---- skunks
+---- skunked
+---- double skunks
+---- double skunked
+---- total / avg pegs
+---- opp total / avg pegs
+
+if you would like to try this app before you purchase, please search for "cribbage board" in the app catalog
+
+i hope you enjoy this app
+
+** support webos developers!
+
+
+================================================================================================
+
+
+thanks to all who continue to work on enyojs
+
+cribbage board is a simple app i've made in the last week
+
+a few coding sessions, a clean windows install, and ~50hrs later i've got a complete app
+
+cribbage board+ uses enyojs beta 5, with panels
+
+it doesn't load anything funny and shouldn't do anything out of the ordinary.
+
+html5 local storage is used for saved game and stats
+
+all images were made by me or found available for modification and commercial redistribution
+
+thank you for taking the time to review this app, and I hope to see it in the catalog soon!
+
+Sincerely,
+Bryan Leasot
+fxspec06
+

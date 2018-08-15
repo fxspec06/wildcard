@@ -2,25 +2,45 @@
     width: 100px;
     height: 150px;
     padding: 10px;
-    margin: 200px;
-    
+
 }
 #titleBar {
     height: 50px;
-    color: white;
+    color: #0f3a65;
+    font-size: 36px;
     text-align: center;
     width: 100%;
     z-index: 999999;
-    background-color: #624343;
+    background-color: #92ceff;
+}
+#streaks-scene {
+    width: 100%;
+    height: 100%;
+    background-color: #0f3a65;
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    text-align: center;
 }
 #streaks-table {
     width: 100%;
 }
 .cardArea {
-    background-image: url("../images/backdrops/backdrop36.jpg");
-    background-position: center center;
-    margin-top: 60px;
-    margin-top: 25%;
+    /*background-image: url("../images/backdrops/backdrop36.jpg");
+    background-position: center center;*/
+    background-color: #dceffe;
+    /*margin-top: 60px;
+    margin-top: 25%;*/
+    transform: translateY(0px);
+    
+
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 */
+        position: relative;
 }
 .cardNum {
     font-size: 24px;
@@ -29,7 +49,7 @@
     margin-left: -30px;
 }
 
-.cardSuit {
+.cardSuits, .cardImage {
     width: 50px;
     height: 50px;
 }
@@ -49,25 +69,35 @@
 button {
     width: 100px;
     height: 100px;
-    border: 4px solid black;
+    border: 4px solid #4a4aff;
     border-radius: 10px;
-    background-color: #b7b7b7;
+    background-color: #92fffc;
+    color: #4a4aff;
     text-align: center;
     transform: translateY(0px);
+    font-size: 24px;
 }
 button:active, .highlight {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
     
-    border: 4px solid black;
-    background-color: #7720CC;
-    color: #FFFFFF;
+    border: 4px solid #92fffc;
+    background-color: #4a4aff;
+    color: #92fffc;
 }
+
+#streaks-table > tr {
+    width: 100%;
+    padding-bottom: 20%;
+}
+
+
 .streaksCard > button {
     height: 150px;
     border: 4px solid black;
     border-radius: 10px;
     background-color: #b7b7b7;
+    color: black;
     text-align: center;
     transform: translateY(0px);
 }
@@ -79,6 +109,37 @@ button:active, .highlight {
     background-color: #7720CC;
     color: #FFFFFF;
 }
+
+#winnerInfo {
+    width:100%;
+    height:18px;
+    font-size:18px;
+    text-align:center;
+    color:#FFFFFF;
+    font-family:"Consolas";
+    font-weight:900;
+    z-index:999999;
+}
+#buttonBar {
+    position:fixed;
+    bottom:18px;
+    right:0;
+    width:100%;
+    opacity:.8;
+    height:100px;
+    font-size:18px;
+    background-color:#92ceff;
+    text-align:right;
+    color:#885555;
+    font-family:Consolas;
+    font-weight:900;
+}
+
+
+
+
+
+
 
 
 

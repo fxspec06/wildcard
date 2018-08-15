@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+xmlns:rim="http://www.blackberry.com/ns/widgets"
+version="0.6.7" rim:header="cribbage board+">
+	<name>cribbage board+</name>
+	<description>replacement for physical cribbage board</description>
+	<author href="http://www.twitter.com/fxspec06" rim:copyright="Copyright 2013 fxspec06">Bryan Leasot</author>
+	<authorId>gYAAgKZPH4Kcm5GhYLhMlDC6oIM</authorId>
+	<feature id="blackberry.invoke" required="true" version="1.0.0" />
+	<feature id="blackberry.invoke.BrowserArguments" required="true" version="1.0.0" />
+    <feature id="blackberry.invoke.MessageArguments" required="true" version="1.0.0" />
+	<icon src="icons/icon256.png" />
+	<rim:loadingScreen backgroundImage="bbsplash.png" />
+	<rim:background backgroundImage="bbsplash.png" />
+	<content src="index.htm" />
+	<rim:orientation mode="auto" />
+</widget>

@@ -1,0 +1,106 @@
+.onyx {
+	background-color: #006168;
+	color: #62b1bd;
+	color: white;
+	padding: 5px;
+	
+	border-spacing: 2px;
+	
+	/*width: 1024px;
+	height: 768px;*/
+}
+.enyo-document-fit {
+	padding: 0px;
+}
+.enyo-body-fit {
+	padding: 0px;
+}
+.onyx-toolbar {
+	background: #62B1BD;
+	color: #003138;
+	height: 50px;
+}
+.enyo-panels {
+	border: none;
+}
+.bigger {
+	font-size: 2em;
+	font-weight: bold;
+}
+.border {
+	border: 2px solid #62b1bd;
+}
+.highlight {
+	background-color: #62b1bd;
+}
+.onyx-focused {
+	color: black;
+}
+.onyx-input {
+	color: inherit;
+	font-weight: 900;
+}
+table {
+	border: 2px outset #003138;
+	background-color: #725c29;
+}
+table td {
+	border: 5px solid;
+	padding: 15px;
+	
+}
+.hovering {
+	border: 5px inset;
+}
+.holding {
+	border: 5px outset;
+}
+
+
+.plyrs {
+	height: 75px;
+}
+.plyr {
+	width: 240px;
+	height: inherit;
+	border: 5px ridge #927c49 !important;
+	padding: 5px;
+	background-color: #725c29;
+	font-size: 1.5em;
+	overflow: visible;
+}
+.plyr.active {
+	background-color: #927c49;
+	font-weight: bold;
+}
+
+.board {
+	
+}
+
+.game {
+	margin: 0px;
+	padding: 0px;
+	top: -50px !important;
+}
+
+.peg {
+	position: absolute;
+	z-index: 2;
+	
+	/*margin-left: 929px;*/
+	/*margin-top: 288px;*/
+}
+
+.pegger {
+	position:relative;
+	display:block;
+}
+
+.boardimg {
+	z-index: 1;
+}
+
+a, a:visited {
+	color: white;
+}

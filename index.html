@@ -310,7 +310,7 @@ Use of Villo appliccable to the appropriate licenses
         
         
         
-        <div id="streaks-scene" style="width: 100%; height: 100%; background-color: #0f3a65; font-size: 18px; font-weight: 900; color: white; position: fixed; z-index: 1000000; top: 0; left: 0; text-align: center;">
+        <div id="streaks-scene" style="">
             <table id="streaks-table">
                 <tr style="width:100%;" onclick="gotomain()">
                     <td id="titleBar" colspan=6>Streaks!</td>
@@ -324,49 +324,91 @@ Use of Villo appliccable to the appropriate licenses
                 <tr class="cardArea">
                     <td class="streaksCard">
                         <button id="card1">
-                            <div id="card1number" class="cardNum"></div>
-                            <div id="card1suit" class="cardSuit"></div>
+							<table>
+								<tr>
+									<td id="card1number" class="cardNum">
+									</td>
+								</tr>
+								<tr>
+									<td id="card1suits" class="cardSuits"></td>
+								</tr>
+							</table>
                         </button>
                     </td>
                     <td class="streaksCard">
                         <button id="card2">
-                            <div id="card2number" class="cardNum"></div>
-                            <div id="card2suit" class="cardSuit"></div>
+							<table>
+								<tr>
+									<td id="card2number" class="cardNum">
+									</td>
+								</tr>
+								<tr>
+									<td id="card2suits" class="cardSuits"></td>
+								</tr>
+							</table>
                         </button>
                     </td>
                     <td class="streaksCard">
                         <button id="card3">
-                            <div id="card3number" class="cardNum"></div>
-                            <div id="card3suit" class="cardSuit"></div>
+							<table>
+								<tr>
+									<td id="card3number" class="cardNum">
+									</td>
+								</tr>
+								<tr>
+									<td id="card3suits" class="cardSuits"></td>
+								</tr>
+							</table>
                         </button>
                     </td>
                     <td class="streaksCard">
                         <button id="card4">
-                            <div id="card4number" class="cardNum"></div>
-                            <div id="card4suit" class="cardSuit"></div>
+							<table>
+								<tr>
+									<td id="card4number" class="cardNum">
+									</td>
+								</tr>
+								<tr>
+									<td id="card4suits" class="cardSuits"></td>
+								</tr>
+							</table>
                         </button>
                     </td>
                     <td class="streaksCard">
                         <button id="card5">
-                            <div id="card5number" class="cardNum"></div>
-                            <div id="card5suit" class="cardSuit"></div>
+							<table>
+								<tr>
+									<td id="card5number" class="cardNum">
+									</td>
+								</tr>
+								<tr>
+									<td id="card5suits" class="cardSuits"></td>
+								</tr>
+							</table>
                         </button>
                     </td>
                     <td class="streaksCard">
                         <button id="card6">
-                            <div id="card6number" class="cardNum"></div>
-                            <div id="card6suit" class="cardSuit"></div>
+							<table>
+								<tr>
+									<td id="card6number" class="cardNum">
+									</td>
+								</tr>
+								<tr>
+									<td id="card6suits" class="cardSuits"></td>
+								</tr>
+							</table>
                         </button>
                     </td>
                 </tr>
                 
                 <tr>
-                    <td colspan=6 style="width:100%;height:18px;font-size:18px;text-align:center; color:#FFFFFF;font-family:Consolas;font-weight:900;z-index:999999;" id="winnerInfo">
+                    <td colspan=6 style="" id="winnerInfo">
                     </td>
                 </tr>
                 
                 <tr>
-                    <td style="position:fixed; bottom:18px;right:0;width:100%;opacity:.8;height:100px;font-size:18px;background-color:#CC9090;text-align:right; color:#885555;font-family:Consolas;font-weight:900;" id="buttonBar">
+                    <td style="" id="buttonBar">
                     
                     <button id="backButton" style="width: 100px; height: 100px; float:left; display: none;">BACK</button>
                         <button id="menuButton" style="width: 100px; height: 100px; float:left;" onclick="showMenu()">MENU</button>
@@ -383,7 +425,8 @@ Use of Villo appliccable to the appropriate licenses
                 }
                 function setCards(num) {
                     wildnGameSettings.resumePause = resume = (NUM_CARDS == num);
-                    
+                    if (!isFlashing) isFlashing = !resume;
+                    stage.saveOptions();
                     
                     NUM_CARDS = num;
                     
@@ -426,6 +469,8 @@ Use of Villo appliccable to the appropriate licenses
                 console.log(areWild + ", " + playingWildnGame);
                 wildnGameSettings.resumePause = resume = (areWild == playingWildnGame);
                 playingWildnGame = areWild;
+                if (!isFlashing) isFlashing = !resume;
+                stage.saveOptions();
                 swapScene("streaks");
             }
             function popupContinue() {
