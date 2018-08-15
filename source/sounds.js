@@ -30,9 +30,9 @@ function playSound(audioIndex) {
             
             playQueue.splice(0, 1);
             break;
-        case "Android":
+        /*case "Android":
             Android.playSound(audioIndex);
-            break;
+            break;*/
         default:
             enyoComponentz.playSound(sounds[audioIndex], audioIndex);
             return;
@@ -86,7 +86,7 @@ function loadHTML5Audio() {
             playQueue.push(audioIndex);
         if(playQueue.length == 1 || force) {
             try{
-                //soundArray[playQueue[0]].play();
+                soundArray[playQueue[0]].play();
             } catch (e){console.error("omfg error playing");}
         }
     }
